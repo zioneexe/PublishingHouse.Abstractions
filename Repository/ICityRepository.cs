@@ -1,13 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Repository.General;
 
-namespace PublishingHouse.Abstractions.Repository;
-
-public interface ICityRepository
+namespace PublishingHouse.Abstractions.Repository
 {
-    Task<List<ICity>> GetAllAsync();
-    Task<ICity?> GetByIdAsync(int id);
-    Task<List<ICity>> GetByRegionIdAsync(int regionId);
-    Task<ICity> AddAsync(ICity city);
-    Task<ICity?> UpdateAsync(int id, ICity city);
-    Task<ICity?> DeleteAsync(int id);
+    public interface ICityRepository : IRepository<ICity> { }
 }

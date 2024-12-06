@@ -1,15 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
-using PublishingHouse.Shared.Model.Input;
-using PublishingHouse.Shared.Model.Output;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Service.General;
 
-namespace PublishingHouse.Abstractions.Service;
-
-public interface IPositionService
+namespace PublishingHouse.Abstractions.Service
 {
-    Task<List<PositionOutput>> GetAllAsync();
-    Task<PositionOutput?> GetByIdAsync(int id);
-    Task<PositionOutput> AddAsync(PositionInput positionInput);
-    Task<PositionOutput?> UpdateAsync(int id, PositionInput positionInput);
-    Task<PositionOutput?> DeleteAsync(int id);
-    Task<PositionOutput?> GetPositionWithEmployeesAsync(int id);
+    public interface IPositionService : ICrudService<IPosition> { }
 }

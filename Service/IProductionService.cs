@@ -1,15 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
-using PublishingHouse.Shared.Model.Input;
-using PublishingHouse.Shared.Model.Output;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Service.General;
 
-namespace PublishingHouse.Abstractions.Service;
-
-public interface IProductionService
+namespace PublishingHouse.Abstractions.Service
 {
-    Task<List<ProductionOutput>> GetAllAsync();
-    Task<ProductionOutput?> GetByIdAsync(int id);
-    Task<ProductionOutput> AddAsync(ProductionInput productionInput);
-    Task<ProductionOutput?> UpdateAsync(int id, ProductionInput productionInput);
-    Task<ProductionOutput?> DeleteAsync(int id);
-    Task<ProductionOutput?> GetProductionWithDetailsAsync(int id);
+    public interface IProductionService : ICrudService<IProduction> { }
 }

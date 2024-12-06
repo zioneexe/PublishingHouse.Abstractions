@@ -1,15 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
-using PublishingHouse.Shared.Model.Input;
-using PublishingHouse.Shared.Model.Output;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Service.General;
 
-namespace PublishingHouse.Abstractions.Service;
-
-public interface IBatchPrintService
+namespace PublishingHouse.Abstractions.Service
 {
-    Task<List<BatchPrintOutput>> GetAllAsync();
-    Task<BatchPrintOutput?> GetByIdAsync(int id);
-    Task<BatchPrintOutput> AddAsync(BatchPrintInput batchPrintInput);
-    Task<BatchPrintOutput?> UpdateAsync(int id, BatchPrintInput batchPrintInput);
-    Task<BatchPrintOutput?> DeleteAsync(int id);
-    Task<BatchPrintOutput?> GetBatchPrintWithDetailsAsync(int id);
+    public interface IBatchPrintService : ICrudService<IBatchPrint> { }
 }

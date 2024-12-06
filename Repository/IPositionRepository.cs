@@ -1,13 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Repository.General;
 
-namespace PublishingHouse.Abstractions.Repository;
-
-public interface IPositionRepository
+namespace PublishingHouse.Abstractions.Repository
 {
-    Task<List<IPosition>> GetAllAsync();
-    Task<IPosition?> GetByIdAsync(int id);
-    Task<IPosition?> GetByNameAsync(string name);
-    Task<IPosition> AddAsync(IPosition position);
-    Task<IPosition?> UpdateAsync(int id, IPosition position);
-    Task<IPosition?> DeleteAsync(int id);
+    public interface IPositionRepository : IRepository<IPosition> { }
 }

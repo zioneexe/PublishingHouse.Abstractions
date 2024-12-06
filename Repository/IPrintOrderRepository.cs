@@ -1,15 +1,13 @@
-﻿using PublishingHouse.Abstractions.Model;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Repository.General;
 
-namespace PublishingHouse.Abstractions.Repository;
-
-public interface IPrintOrderRepository
+namespace PublishingHouse.Abstractions.Repository
 {
-    Task<List<IPrintOrder>> GetAllAsync();
-    Task<IPrintOrder?> GetByIdAsync(int id);
-    Task<List<IPrintOrder>> GetByCustomerIdAsync(int customerId);
-    Task<List<IPrintOrder>> GetByEmployeeIdAsync(int employeeId);
-    Task<List<IPrintOrder>> GetByOrderStatusIdAsync(int orderStatusId);
-    Task<IPrintOrder> AddAsync(IPrintOrder printOrder);
-    Task<IPrintOrder?> UpdateAsync(int id, IPrintOrder printOrder);
-    Task<IPrintOrder?> DeleteAsync(int id);
+    public interface IPrintOrderRepository : IRepository<IPrintOrder>
+    {
+        public Task<IEnumerable<IPrintOrder>> GetByCustomerIdAsync(int customerId);
+        public Task<IEnumerable<IPrintOrder>> GetByEmployeeIdAsync(int employeeId);
+        public Task UpdateOrderStatusAsync(int orderId, IOrderStatus orderStatus);
+        public Task<int> AddWithIdAsync(IPrintOrder entity);
+    }
 }

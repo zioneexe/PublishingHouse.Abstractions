@@ -6,6 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
   <ItemGroup>
     <Compile Remove="Models\**" />
     <Compile Remove="Services\**" />
@@ -13,10 +17,6 @@
     <EmbeddedResource Remove="Services\**" />
     <None Remove="Models\**" />
     <None Remove="Services\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\PublishingHouse.Shared\PublishingHouse.Shared.csproj" />
   </ItemGroup>
 
 </Project>

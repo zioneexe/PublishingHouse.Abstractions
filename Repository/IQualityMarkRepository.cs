@@ -1,12 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Repository.General;
 
-namespace PublishingHouse.Abstractions.Repository;
-
-public interface IQualityMarkRepository
+namespace PublishingHouse.Abstractions.Repository
 {
-    Task<List<IQualityMark>> GetAllAsync();
-    Task<IQualityMark?> GetByIdAsync(int id);
-    Task<IQualityMark> AddAsync(IQualityMark qualityMark);
-    Task<IQualityMark?> UpdateAsync(int id, IQualityMark qualityMark);
-    Task<IQualityMark?> DeleteAsync(int id);
+    public interface IQualityMarkRepository : IRepository<IQualityMark> { }
 }

@@ -1,15 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
-using PublishingHouse.Shared.Model.Input;
-using PublishingHouse.Shared.Model.Output;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Service.General;
 
-namespace PublishingHouse.Abstractions.Service;
-
-public interface IOrderStatusService
+namespace PublishingHouse.Abstractions.Service
 {
-    Task<List<OrderStatusOutput>> GetAllAsync();
-    Task<OrderStatusOutput?> GetByIdAsync(int id);
-    Task<OrderStatusOutput> AddAsync(OrderStatusInput orderStatusInput);
-    Task<OrderStatusOutput?> UpdateAsync(int id, OrderStatusInput orderStatusInput);
-    Task<OrderStatusOutput?> DeleteAsync(int id);
-    Task<OrderStatusOutput?> GetOrderStatusWithPrintOrdersAsync(int id);
+    public interface IOrderStatusService : ICrudService<IOrderStatus> { }
 }

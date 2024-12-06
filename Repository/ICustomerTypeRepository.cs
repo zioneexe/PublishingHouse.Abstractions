@@ -1,12 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Repository.General;
 
-namespace PublishingHouse.Abstractions.Repository;
-
-public interface ICustomerTypeRepository
+namespace PublishingHouse.Abstractions.Repository
 {
-    Task<List<ICustomerType>> GetAllAsync();
-    Task<ICustomerType?> GetByIdAsync(int id);
-    Task<ICustomerType> AddAsync(ICustomerType customerType);
-    Task<ICustomerType?> UpdateAsync(int id, ICustomerType customerType);
-    Task<ICustomerType?> DeleteAsync(int id);
+    public interface ICustomerTypeRepository : IRepository<ICustomerType> {}
 }

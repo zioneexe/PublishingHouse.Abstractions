@@ -1,0 +1,12 @@
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\bin\Debug\net8.0\PublishingHouse.Abstractions.deps.json
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\bin\Debug\net8.0\PublishingHouse.Abstractions.dll
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\bin\Debug\net8.0\PublishingHouse.Abstractions.pdb
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\obj\Debug\net8.0\PublishingHouse.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\obj\Debug\net8.0\PublishingHouse.Abstractions.AssemblyInfoInputs.cache
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\obj\Debug\net8.0\PublishingHouse.Abstractions.AssemblyInfo.cs
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\obj\Debug\net8.0\PublishingHouse.Abstractions.csproj.CoreCompileInputs.cache
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\obj\Debug\net8.0\PublishingHouse.Abstractions.sourcelink.json
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\obj\Debug\net8.0\PublishingHouse.Abstractions.dll
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\obj\Debug\net8.0\refint\PublishingHouse.Abstractions.dll
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\obj\Debug\net8.0\PublishingHouse.Abstractions.pdb
+D:\repos\KPZ\Lab3,4,5\PublishingHouse\PublishingHouse.Abstractions\obj\Debug\net8.0\ref\PublishingHouse.Abstractions.dll

@@ -1,15 +1,10 @@
-﻿using PublishingHouse.Abstractions.Model;
-using PublishingHouse.Shared.Model.Input;
-using PublishingHouse.Shared.Model.Output;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Service.General;
 
-namespace PublishingHouse.Abstractions.Service;
-
-public interface IBookService
+namespace PublishingHouse.Abstractions.Service
 {
-    Task<List<BookOutput>> GetAllAsync();
-    Task<BookOutput?> GetByIdAsync(int id);
-    Task<BookOutput> AddAsync(BookInput bookInput);
-    Task<BookOutput?> UpdateAsync(int id, BookInput bookInput);
-    Task<BookOutput?> DeleteAsync(int id);
-    Task<BookOutput?> GetBookWithDetailsAsync(int id);
+    public interface IBookService : ICrudService<IBook>
+    {
+        Task<int> AddWithIdAsync(IBook entity);
+    }
 }

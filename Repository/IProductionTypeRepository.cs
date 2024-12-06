@@ -1,12 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Repository.General;
 
-namespace PublishingHouse.Abstractions.Repository;
-
-public interface IProductionTypeRepository 
+namespace PublishingHouse.Abstractions.Repository
 {
-    Task<List<IProductionType>> GetAllAsync();
-    Task<IProductionType?> GetByIdAsync(int id);
-    Task<IProductionType> AddAsync(IProductionType productionType);
-    Task<IProductionType?> UpdateAsync(int id, IProductionType productionType);
-    Task<IProductionType?> DeleteAsync(int id);
+    public interface IProductionTypeRepository : IRepository<IProductionType> { }
 }

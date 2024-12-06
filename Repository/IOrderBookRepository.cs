@@ -1,14 +1,12 @@
-﻿using PublishingHouse.Abstractions.Model;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Repository.General;
 
-namespace PublishingHouse.Abstractions.Repository;
-
-public interface IOrderBookRepository
+namespace PublishingHouse.Abstractions.Repository
 {
-    Task<List<IOrderBook>> GetAllAsync();
-    Task<IOrderBook?> GetByIdAsync(int id);
-    Task<IOrderBook> AddAsync(IOrderBook orderBook);
-    Task<IOrderBook?> UpdateAsync(int id, IOrderBook orderBook);
-    Task<IOrderBook?> DeleteAsync(int id);
-    Task<List<IOrderBook>> GetOrderBooksByOrderIdAsync(int orderId);
-    Task<List<IOrderBook>> GetOrderBooksByBookIdAsync(int bookId);
+    public interface IOrderBookRepository : IRepository<IOrderBook>
+    {
+        public Task<IEnumerable<IOrderBook>> GetByOrderIdAsync(int orderId);
+
+        public Task DeleteByOrderIdAsync(int orderId);
+    }
 }

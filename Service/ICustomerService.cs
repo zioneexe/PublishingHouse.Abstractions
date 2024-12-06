@@ -1,15 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
-using PublishingHouse.Shared.Model.Input;
-using PublishingHouse.Shared.Model.Output;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Service.General;
 
-namespace PublishingHouse.Abstractions.Service;
-
-public interface ICustomerService
+namespace PublishingHouse.Abstractions.Service
 {
-    Task<List<CustomerOutput>> GetAllAsync();
-    Task<CustomerOutput?> GetByIdAsync(int id);
-    Task<CustomerOutput> AddAsync(CustomerInput customerInput);
-    Task<CustomerOutput?> UpdateAsync(int id,CustomerInput customerInput);
-    Task<CustomerOutput?> DeleteAsync(int id);
-    Task<CustomerOutput?> GetCustomerWithOrdersAsync(int id);
+    public interface ICustomerService : ICrudService<ICustomer>, IGetIdByUserIdService<ICustomer>, IAccessCheckService<ICustomer> { }
 }

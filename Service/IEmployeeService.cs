@@ -1,15 +1,7 @@
-﻿using PublishingHouse.Abstractions.Model;
-using PublishingHouse.Shared.Model.Input;
-using PublishingHouse.Shared.Model.Output;
+﻿using PublishingHouse.Abstractions.Entity;
+using PublishingHouse.Abstractions.Service.General;
 
-namespace PublishingHouse.Abstractions.Service;
-
-public interface IEmployeeService
+namespace PublishingHouse.Abstractions.Service
 {
-    Task<List<EmployeeOutput>> GetAllAsync();
-    Task<EmployeeOutput?> GetByIdAsync(int id);
-    Task<EmployeeOutput> AddAsync(EmployeeInput employeeInput);
-    Task<EmployeeOutput?> UpdateAsync(int id, EmployeeInput employeeInput);
-    Task<EmployeeOutput?> DeleteAsync(int id);
-    Task<EmployeeOutput?> GetEmployeeWithDetailsAsync(int id);
+    public interface IEmployeeService : ICrudService<IEmployee>, IGetIdByUserIdService<IEmployee> { }
 }
