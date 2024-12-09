@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/bin/Debug/net8.0/PublishingHouse.Abstractions.dll
+/bin/Debug/net8.0/PublishingHouse.Abstractions.pdb
+/obj/Debug/net8.0/ref/PublishingHouse.Abstractions.dll
+/obj/Debug/net8.0/refint/PublishingHouse.Abstractions.dll
+/obj/Debug/net8.0/PublishingHouse.Abstractions.AssemblyInfo.cs
+/obj/Debug/net8.0/PublishingHouse.Abstractions.dll
+/obj/Debug/net8.0/PublishingHouse.Abstractions.AssemblyInfoInputs.cache
+/obj/Debug/net8.0/PublishingHouse.Abstractions.pdb
+/obj/Debug/net8.0/PublishingHouse.Abstractions.sourcelink.json
